@@ -1,0 +1,280 @@
+body{
+    background-color: #2D2424;
+    display: grid;
+    place-content: center;
+    margin: auto;
+
+}
+
+.header {
+    background-color: #412c2c;
+    color: #E0C097;
+    padding: 20px ;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav ul li a:hover {
+    color: #E0C097;
+}
+
+.TituloSeccion{
+    margin-top: 50px;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #E0C097;
+}
+
+#NoticiasImport{
+    padding: 15px;
+    background-color: #B85C38;
+    margin: 25px;
+    
+}
+
+#ContenedorNoticiImp{
+    padding: 15px;
+    background-color: #B85C38;
+    margin: 25px;
+}
+
+.TituloSeccionMobile{
+    translate: 0px -500px;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #E0C097;
+
+}
+
+.Miniaturas{
+    display: flex;
+    visibility: hidden;
+    position: center;
+    place-content: center;
+}
+
+#Avisos{
+    left: 10px;
+
+    
+}
+
+#Avisos .cell{
+    height: 300px;
+    margin: 20px;
+    
+}
+
+#Aviso1{
+    background:#B85C38;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    place-content: center;
+    color: #000000;
+    
+}
+
+#Aviso2{
+    background:#B85C38;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+#OtrasNoticias .cell{
+    height: 300px;
+    margin: 20px;
+    
+}
+
+#Avisos #TituloAvisos{
+    height: 50px;
+    background-color:#B85C38;
+    gap: 10px;  
+    text-align: center;
+    font-size: 30px;
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+}
+
+#OtrasNoticias #TituloAvisos{
+    height: 50px;
+    
+    background-color:#B85C38;
+    gap: 10px;  
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+  } 
+
+
+
+
+#NoticiaCentralPop{
+    padding: 15px;
+    background-color: #B85C38;
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+    translate: 0px -500px;
+}
+
+#NoticiaDeportesPop{
+    padding: 15px;
+    background-color: #B85C38;
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+    translate: 0px -500px;
+}
+
+#NoticiaEconomiaPop{
+    padding: 15px;
+    background-color: #B85C38;
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+    translate: 0px -500px;
+}
+
+#NoticiaCentralPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+#NoticiaDeportesPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+#NoticiaEconomiaPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+#NoticiaCentralPop p{
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+#NoticiaDeportesPop p{
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+#NoticiaEconomiaPop p{
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.noticia1{
+    background-color: #E0C097;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.noticia2{
+    background-color: #E0C097;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.noticia3{
+    background-color: #E0C097;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+#NoticiaCentralPop a{
+    visibility: hidden;
+}
+
+#NoticiaDeportesPop a{
+    visibility: hidden;
+}
+
+#NoticiaEconomiaPop a{
+    visibility: hidden;
+}
+
+.footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    place-content: center;
+}
+
+#LogoFooter img{
+    border-radius: 100px;
+    height: auto;
+    width: 20%;
+    display: grid;
+    place-content: center;
+    position: relative;
+    left: 170px;
+}
+
+#redes .cell{
+    height: 64px;
+    width: 64px;
+
+
+}
+
+#redes{
+    position: relative;
+    left: 30PX;
+   
+}

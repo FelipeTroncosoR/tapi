@@ -1,0 +1,564 @@
+body{
+    background-color: #2D2424;
+    display: grid;
+    place-content: center;
+}
+
+.header {
+    background-color: #412c2c;
+    color: #E0C097;
+    padding: 20px ;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+}
+
+.logo {
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav ul li a:hover {
+    color: #E0C097;
+}
+/*Header*/
+
+.Miniaturas a{
+    position: relative;
+    width: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #E0C097;
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 15px;
+    left: 150px;
+}
+.TituloSeccion{
+    margin-top: 50px;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #E0C097;
+}
+
+.TituloSeccionMobile{
+    visibility: hidden;
+}
+.ContenedorNoticias{
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(184,92,56,1) 50%, rgba(255,255,255,0) 100%);
+    height: 380px;
+    width: 1200px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.ContenedorNoticias h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    
+}
+.ContenedorNoticias img{
+    height: 80%;
+    width: 90%;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.NoticiaIzquierda{
+    z-index: 2;
+    display:grid;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #5C3D2E;
+    height: 250px;
+    width: 350px;
+    display: absolute;
+    margin-top: 50px;
+}
+
+.NoticiaMinuaturaCentral{
+    z-index: 10;
+    display:grid;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #E0C097;
+    height: 350px;
+    width: 450px;
+    
+}
+
+.NoticiaDerecha{
+    z-index: 2;
+    display:grid;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #5C3D2E;
+    height: 250px;
+    width: 350px;
+    display: absolute;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.NoticiaIzquierda:hover{
+    animation-name: EscalaMiniaturas;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.NoticiaDerecha:hover{
+    animation-name: EscalaMiniaturas;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.Miniaturas#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+    transition: 0.1s;
+}
+
+#NoticiaCentralPop{
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1600px;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: #B85C38;
+}
+
+#NoticiaCentralPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    
+
+}
+
+#NoticiaCentralPop .cuerpo{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: px;
+    
+
+}
+#NoticiaCentralPop > *{
+    
+    background-color:#9e4b2a;
+    border-radius: 15px;
+}
+
+#NoticiaCentralPop img{
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+#NoticiaCentralPop.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    
+
+}
+
+#NoticiaCentralPop a{
+    padding:auto ;
+    width: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color:#B85C38;
+    background-color: #000000;
+}
+
+#NoticiaDeportesPop{
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1600px;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: #B85C38;
+    
+}
+
+#NoticiaDeportesPop.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+#NoticiaDeportesPop a{
+    padding:auto ;
+    width: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color:#B85C38;
+    background-color: #000000;
+}
+
+#NoticiaEconomiaPop{
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1600px;
+    padding: 20px;
+    background-color: azure;
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: #B85C38;
+    
+}
+
+#NoticiaEconomiaPop.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+#NoticiaDeportesPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    
+
+}
+
+#NoticiaDeportesPop .cuerpo{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: px;
+    
+
+}
+#NoticiaDeportesPop > *{
+    
+    background-color:#9e4b2a;
+    border-radius: 15px;
+}
+
+#NoticiaDeportesPop img{
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+#NoticiaEconomiaPop .titulo{
+    font-family: "Jacquard 24", system-ui;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    
+
+}
+
+#NoticiaEconomiaPop .cuerpo{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #000000;
+    text-align: justify;
+    letter-spacing: px;
+    
+
+}
+#NoticiaEconomiaPop > *{
+    
+    background-color:#9e4b2a;
+    border-radius: 15px;
+}
+
+#NoticiaEconomiaPop a{
+    padding:auto ;
+    width: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color:#B85C38;
+    background-color: #000000;
+}
+
+#NoticiaEconomiaPop img{
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+#NoticiaCentralPop img{
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+body .noticia2:hover{
+    animation-name: ColorNoticia;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 99;
+    border-radius: 15px;
+    
+}
+
+body .noticia1:hover{
+    animation-name: ColorNoticia;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 99;
+    border-radius: 15px;
+    
+}
+
+body .noticia3:hover{
+    animation-name: ColorNoticia;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 99;
+    border-radius: 15px;
+    
+}
+
+.ImgFondo{
+    overflow: hidden;
+    z-index:1;
+    position: absolute;
+    filter: blur(5px);
+    top: -155px;
+    left: 650px;
+    height: 1200px;
+    visibility: hidden;
+}
+
+#NoticiasImport .cell{
+    position:relative;
+    padding: 10px;
+    background-color:#9e4b2a;
+
+    height: 500px;
+
+}
+
+#NoticiasImport .TituloImp{
+    height: 50px;
+    background-color: azure;
+}
+
+#ContenedorNoticiImp .cell{
+    padding: 15px;
+    background-color:#9e4b2a;
+    height: 300PX;
+    border-radius: 15px;
+}
+
+iframe{
+    border-radius: 15px;
+}
+
+.footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    place-content: center;
+}
+
+#LogoFooter img{
+    border-radius: 100px;
+    height: auto;
+    width: 20%;
+    display: grid;
+    place-content: center;
+    position: relative;
+    left: 170px;
+}
+
+#redes .cell{
+    height: 64px;
+    width: 64px;
+
+
+}
+
+#redes{
+    position: relative;
+    left: 30PX;
+   
+}
+
+li:hover{
+   animation-name: Menuhover;
+   animation-duration: 1s;
+}
+
+#Avisos{
+    position: fixed;
+    left: 10px;
+    top: 100px;
+}
+
+#Avisos .cell{
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+}
+
+#Aviso1{
+    background: linear-gradient(0deg, rgba(25,25,35,0) 48%, rgba(184,92,56,1) 100%); 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    
+}
+#Aviso2{
+    background: linear-gradient(0deg, rgba(25,25,35,0) 48%, rgba(184,92,56,1) 100%); 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+#Aviso1 p{
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+}
+
+#Aviso2 p{
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+}
+
+#Avisos #TituloAvisos{
+    height: 50px;
+    width: 300px;
+    background-color:#B85C38; 
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+  }
+
+#OtrasNoticias{
+    position: fixed;
+    left: 1570px;
+    top: 100px;
+    
+    background-color: aliceblue;
+
+}
+
+#OtrasNoticias .cell{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+  }
+
+#OtrasNoticias #TituloAvisos{
+    height: 50px;
+    width: 300px;
+    background-color:#B85C38;
+
+    text-align: center;
+    font-size: 30px;
+    color: #E0C097;
+    font-family: "Jacquard 24", system-ui;
+  }
+
+@keyframes EscalaMiniaturas {
+    to{
+        scale: 1.1;
+    } 
+}
+
+@keyframes ColorNoticia {
+    to{
+        scale: 1.05;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(247,131,86,1) 100%);
+    }
+}
+
+@keyframes Menuhover {
+    to{
+        scale: 1.1;
+    }
+    
+}
